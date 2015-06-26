@@ -24,6 +24,19 @@
     </config-file>
 
     <source-file src="src/android/Barcode.java" target-dir="src/com/micheladrion/plugin/"/>
+	
+	<source-file src="src/android/src/com/zkc/beep/ServiceBeepManager.java" target-dir="src/com/zkc/beep/"/>
+	<source-file src="src/android/src/com/zkc/io/EmGpio.java" target-dir="src/com/zkc/io/"/>
+	<source-file src="src/android/src/com/zkc/pc700/helper/ScanGpio.java" target-dir="src/com/zkc/pc700/helper/"/>
+	<source-file src="src/android/src/com/zkc/pc700/helper/SerialPort.java" target-dir="src/com/zkc/pc700/helper/"/>
+	<source-file src="src/android/src/com/zkc/Receiver/RemoteControlReceiver.java" target-dir="src/com/zkc/Receiver/"/>
+	<source-file src="src/android/src/com/zkc/Receiver/StartReceiver.java" target-dir="src/com/zkc/Receiver/"/>
+	<source-file src="src/android/src/com/zkc/Service/CaptureService.java" target-dir="src/com/zkc/Service/"/>
+	
+	<resource-file src="src/android/res/raw/beep.ogg" target="res/raw/beep.ogg" />
+	<resource-file src="src/android/res/raw/bide.ogg" target="res/raw/bide.ogg" />
+	<resource-file src="src/android/res/raw/camera_click.ogg" target="res/raw/camera_click.ogg" />
+	
   </platform>
 
   <platform name="ios">
