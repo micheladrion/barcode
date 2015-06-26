@@ -44,7 +44,6 @@
 	<config-file target="AndroidManifest.xml" parent="/*/application">
 		<receiver android:name="com.zkc.Receiver.RemoteControlReceiver" android:permission="com.zkc.keycode">
             <intent-filter>
-                <intent-filter android:priority="1000" />
                 <action android:name="com.zkc.keycode" />
             </intent-filter>
         </receiver>
