@@ -33,9 +33,33 @@
 	<source-file src="src/android/src/com/zkc/Receiver/StartReceiver.java" target-dir="src/com/zkc/Receiver/"/>
 	<source-file src="src/android/src/com/zkc/Service/CaptureService.java" target-dir="src/com/zkc/Service/"/>
 	
+	<source-file src="src/android/libs/core-3.1.0.jar" target-dir="libs/"/>
+	<source-file src="src/android/libs/armeabi/libhjh-gpio.so" target-dir="libs/armeabi/"/>
+	<source-file src="src/android/libs/armeabi/libPC700.so" target-dir="libs/armeabi/"/>
+	
 	<resource-file src="src/android/res/raw/beep.ogg" target="res/raw/beep.ogg"/>
 	<resource-file src="src/android/res/raw/bide.ogg" target="res/raw/bide.ogg"/>
 	<resource-file src="src/android/res/raw/camera_click.ogg" target="res/raw/camera_click.ogg"/>
+	
+	<config-file target="AndroidManifest.xml" parent="/*/application">
+		<receiver android:name="com.zkc.Receiver.RemoteControlReceiver" android:permission="com.zkc.keycode">
+            <intent-filter>
+                <intent-filter android:priority="1000" />
+                <action android:name="com.zkc.keycode" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zkc.Receiver.StartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.zkc.Service.CaptureService">
+            <intent-filter>
+                <action android:name="com.zkc.Service.CaptureService" />
+            </intent-filter>
+        </service>
+	</config-file>
 	
   </platform>
 
