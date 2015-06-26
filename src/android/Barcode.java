@@ -61,6 +61,7 @@ public class Barcode extends CordovaPlugin implements CaptureServiceHandler {
 	@Override
 	public void on_get_barcode(String barcode) {
 		// TODO Auto-generated method stub
-		callback_context.success(barcode);
+		String str_barcode = String.format( "%s", barcode.trim() );
+		callback_context.success(str_barcode);
 	}
 }
