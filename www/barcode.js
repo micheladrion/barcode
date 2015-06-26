@@ -1,7 +1,7 @@
 /*global cordova, module*/
 
 module.exports = {
-    scan: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Barcode", "scan", [name] );
+    scan: function ( successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Barcode", "scan", [] );
     }
 };
