@@ -38,6 +38,8 @@
 	
 	<source-file src="src/android/libs/armeabi/libhjh-gpio.so" target-dir="libs/armeabi/"/>
 	<source-file src="src/android/libs/armeabi/libPC700.so" target-dir="libs/armeabi/"/>
+	<source-file src="src/android/libs/armeabi/libhjh-gpio.so" target-dir="libs/armeabi-v7a/"/>
+	<source-file src="src/android/libs/armeabi/libPC700.so" target-dir="libs/armeabi-v7a/"/>
 	
 	<resource-file src="src/android/res/raw/beep.ogg" target="res/raw/beep.ogg"/>
 	
